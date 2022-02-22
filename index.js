@@ -6,8 +6,14 @@ const monApp = Vue.createApp({
         };
     },
 
+    methods: {
+        addNbr(num){
+            this.nbr += num;
+        }
+    },
+
     computed: {
-        addNbr(){
+        checkNbr(){
             if(this.nbr < 7) {
                 return 'ESSAIE ENCORE !';
             } else if(this.nbr == 7) {

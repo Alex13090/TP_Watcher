@@ -10,10 +10,10 @@
 <body class="d-flex justify-content-center">
     <div class="w-25 mt-5 shadow-lg p-3 mb-5 bg-white rounded" id="app">
         <h1 class="h3 text-center mt-5 mb-5">Le numéro gagnant</h1>
-        <button @click="nbr++" type="button" class="btn btn-success">+1</button>
-        <button @click="nbr+=5" type="button" class="btn btn-danger">+5</button>
+        <button @click="addNbr(1)" type="button" class="btn btn-success">+1</button>
+        <button @click="addNbr(5)" type="button" class="btn btn-danger">+5</button>
         <span class="mt-3 p-3">le nombre: {{nbr}}</span>
-        <span class="mt-3">{{addNbr}}</span>
+        <span class="mt-3">{{checkNbr}}</span>
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
