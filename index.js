@@ -6,7 +6,7 @@ const monApp = Vue.createApp({
         };
     },
 
-    methods: {
+    computed: {
         addNbr(){
             if(this.nbr < 7) {
                 return 'ESSAIE ENCORE !';
@@ -19,13 +19,11 @@ const monApp = Vue.createApp({
     },
 
     watch: {
-        refreshPage(){
-            if(this.nbr === this.nbr){
-                setTimeout(() => {
-                Location.reload()
-                }, 5000);
-            }
-        }
+        nbr(value){
+            setTimeout(() => {
+                this.nbr = 0
+            }, 5000);
+        }    
     }
 });
 
