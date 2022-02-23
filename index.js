@@ -2,7 +2,8 @@
 const monApp = Vue.createApp({
     data() {
         return {
-            nbr: 0
+            nbr: 0,
+            // secretNbr: Math.round(Math.random() * 100)
         };
     },
 
@@ -26,9 +27,12 @@ const monApp = Vue.createApp({
 
     watch: {
         nbr(value){
-            setTimeout(() => {
-                this.nbr = 0
-            }, 5000);
+            if(value) {
+                console.log('watch');
+                setTimeout(() => {
+                    this.nbr = 0;
+                }, 5000);
+            }
         }    
     }
 });
